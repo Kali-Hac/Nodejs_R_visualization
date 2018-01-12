@@ -1,0 +1,11 @@
+library(REmap)
+library(maps)  
+library(mapdata)  
+library(maptools) 
+library(rgeos)
+setwd('..//Nodejs//map')
+
+options(remap.js.web=T)
+data <- read.csv('migrate.csv')
+result <- remap(data,theme = get_theme("Dark"))
+plot(result)
